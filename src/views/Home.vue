@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <p>{{ greetText }}</p>
+    <p>挨拶した回数 : {{ count }}</p>
     <p>
       <MyButton :greet="greetText" @click="onMyButtonClicked"></MyButton>
     </p>
@@ -23,8 +24,10 @@ import ResetButton from '@/components/ResetButton.vue';
 })
 export default class Home extends Vue {
   public greetText: string = 'Hello';
+  private count: number = 0;
 
-  public onMyButtonClicked() {
+  public onMyButtonClicked(count: number) {
+    this.count = count;
     this.greetText = 'こんにちは';
   }
 }
