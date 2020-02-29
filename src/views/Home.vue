@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Watch, Vue } from 'vue-property-decorator';
 import MyButton from '@/components/MyButton.vue';
 import ResetButton from '@/components/ResetButton.vue';
 
@@ -34,6 +34,13 @@ export default class Home extends Vue {
   public onMyButtonClicked(count: number) {
     this.count = count;
     this.greetText = 'こんにちは';
+  }
+
+  @Watch('count')
+  public countChanged() {
+    if (this.count === 3) {
+      alert('常連になりました');
+    }
   }
 }
 </script>
