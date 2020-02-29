@@ -11,7 +11,6 @@ import { Component, Emit, Prop, Vue } from 'vue-property-decorator';
 export default class MyButton extends Vue {
   @Prop()
   public greet?: string;
-
   private count: number = 0;
 
   @Emit()
