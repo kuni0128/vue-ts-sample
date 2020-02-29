@@ -22,10 +22,10 @@ import ResetButton from '@/components/ResetButton.vue';
   },
 })
 export default class Home extends Vue {
-  public greetText: string = "Hello";
+  public greetText: string = 'Hello';
 
   public onMyButtonClicked() {
-    this.greetText = "こんにちは";
+    this.greetText = 'こんにちは';
   }
 }
 </script>

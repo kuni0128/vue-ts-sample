@@ -11,8 +11,7 @@ export default class MyButton extends Vue {
   public greet?: string;
 
   @Emit()
-  public click() {
-  }
+  public click() {}
 
   public onClick() {
     alert(this.greet);
