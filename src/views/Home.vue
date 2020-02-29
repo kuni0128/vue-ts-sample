@@ -5,7 +5,7 @@
       <MyButton :greet="greetText" @click="onMyButtonClicked"></MyButton>
     </p>
     <p>
-      <ResetButton initialValue="Hello" v-model="greetText"></ResetButton>
+      <ResetButton v-model="greetText"></ResetButton>
     </p>
   </div>
 </template>
